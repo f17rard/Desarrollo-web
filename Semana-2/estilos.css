@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Workbench&display=swap');
+
+body{
+    margin:0;
+    font-size: 16px;
+    color: #3A2C24;
+    background-color: #FFF;
+    line-height: 1.6;
+    font-family: "Workbench", sans-serif;
+}
+
+h1, h2, h3 {
+    color: #4E342E;
+    margin-top: 0;
+}
+h1{font-size: 32px;}
+h2{font-size: 26px;}
+h3{font-size: 18px;}
+
+.contenedor{
+    max-width: 720px;
+    margin: 10px auto;
+    padding: 24px;
+}
+
+#encabezado{
+    background-color: #4E342E;
+    border-bottom: 4px solid #B5652D;
+    border-top: 4px solid #B5652D;
+}
+
+#encabezado .contenedor{
+    text-align: center;
+}
+
+.marca{
+    font-size: 22px;
+    font-family: "Workbench", sans-serif;
+    color: white;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.seccion-clara{
+    background-color: white;
+}
+
+.seccion-oscura{
+    background-color: #f1e9dc;
+}
+
+.seccion .contenedor{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
