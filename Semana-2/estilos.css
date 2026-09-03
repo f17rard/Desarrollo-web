@@ -196,3 +196,25 @@ a[href^="mailto:"]{
     border-bottom: 2px solid #B5652D;
     transition: 1s all;
 }
+
+.boton:hover{
+  background-color: #B5652D;
+
+}
+
+.boton:active{
+  background-color: #8a4a25;
+}
+
+.tabla-menu tbody tr:first-child{
+  border-top: 3px solid #B5652D;
+}
+
+.tabla-menu tbody tr:nth-child(even){ /*par*/
+  background-color: #F1E9DC;
+}
+
+.tabla-menu tbody tr:nth-child(odd){ /*impar*/
+  background-color: white;
+}
+
