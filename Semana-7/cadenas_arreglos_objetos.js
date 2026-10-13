@@ -210,6 +210,14 @@ Unidades: ${cantidad}`;
   // 4. Genere con una plantilla literal: "Producto: cuaderno | Total: $7".
   // 5. Reemplace "cuaderno" por "libreta" en el mensaje obtenido.
   // Desarrollo:
+  let entSinespacios = entrada.trim();
+  console.log(entSinespacios)
+  let arreglo = entSinespacios.split(";");
+  console.log(arreglo)
+  console.log(arreglo[0])
+  console.log(arreglo[1])
+  console.log(arreglo[2])
+  console.log(`Producto: ${arreglo[0].toLowerCase()} | Total: $${arreglo[1] * arreglo[2]}`)
 }
 
 // 2. ARREGLOS (diapositivas 21 a 34)
@@ -279,6 +287,10 @@ Unidades: ${cantidad}`;
   // Resultado final: ["planificar", "leer", "programar", "entregar"].
   // Elemento retirado: "revisar".
   // Desarrollo:
+  console.log(tareas.push("revisar"))
+  console.log(tareas)
+  console.log(tareas.unshift("planificar"))
+  console.log(tareas)
 }
 
 // 2.4. Buscar elementos
