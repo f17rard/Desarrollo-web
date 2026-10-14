@@ -178,8 +178,8 @@ console.log("IIFE:", configuracion.obtenerVersion());
 // - decrementar(): resta 1 y devuelve el nuevo valor.
 // - consultar(): devuelve el valor actual sin modificarlo.
 // Cada contador debe tener un estado independiente.
-function crearContador(inicio = 0) {
-  let inicio = inicio;
+function crearContador(start = 0) {
+  let inicio = start;
 
   return{
     incrementar(inicio){
@@ -236,9 +236,14 @@ console.log("reduce:", inventario.reduce((total, p) => total + p.precio * p.stoc
 // stock > 0 y precio <= precioMaximo. Mantener el orden original.
 // Usar filter() y map(). No modificar el arreglo recibido.
 const listarDisponibles = (productos, precioMaximo) => {
-  throw new Error("TODO ejercicio 5: listarDisponibles");
+  return productos
+  .filter(p => p.stock > 0)
+  .filter(p => p.precio <= precioMaximo)
+  .map(p => p.nombre.toUpperCase())
 };
 
+let MAX = 20;
+console.log(listarDisponibles(inventario, MAX));
 // ============================================================
 // 7. SOME, EVERY, FIND Y FINDINDEX
 // ============================================================
