@@ -34,6 +34,9 @@ nombre.addEventListener("input", function () {
 // usuario escribe en el textarea. Formato esperado: "12/200".
 // Pista: comentarios.value.length, contadorComentarios.textContent.
 // TODO 1: registra un listener para "input" en comentarios.
+comentarios.addEventListener("input", function () {
+  contadorComentarios.textContent = `${comentarios.value.length}/200`;
+});
 
 // ============================================================
 // 3. EVENTO change — EJEMPLO RESUELTO
@@ -62,6 +65,8 @@ opcionesModalidad.forEach(function (opcion) {
 // ACTIVIDAD 2 (change): al marcar o desmarcar el taller,
 // el resumen y el precio también deben actualizarse.
 // TODO 2: agrega un addEventListener al checkbox taller.
+taller.addEventListener("change", actualizarResumen);
+
 
 // ============================================================
 // 4. EVENTOS focus Y blur — EJEMPLO + ACTIVIDAD
@@ -74,6 +79,9 @@ nombre.addEventListener("focus", function () {
 // ACTIVIDAD 3 (blur): al perder el foco, la ayuda debe regresar
 // a su aspecto original. Quita las clases añadidas arriba.
 // TODO 3: listener para "blur" en nombre con classList.remove(...).
+nombre.addEventListener("blur", function () {
+  document.querySelector("#ayudaNombre").classList.remove("text-primary", "fw-semibold");
+});
 
 // ============================================================
 // 5. VALIDACIONES CON FUNCIONES REUTILIZABLES
@@ -96,6 +104,8 @@ function validarCorreo() {
 // ACTIVIDAD 4 (blur): validar el nombre y el correo cuando
 // cada campo pierde el foco, sin esperar al envío del formulario.
 // TODO 4: listeners "blur" que llamen validarNombre / validarCorreo.
+nombre.addEventListener("blur", validarNombre);
+correo.addEventListener("blur", validarCorreo);
 
 // ============================================================
 // 6. EVENTO submit — EJEMPLO GUIADO + ACTIVIDAD FINAL
